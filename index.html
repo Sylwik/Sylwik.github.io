@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylwia Dudzik - portfolio</title>
+    <meta name="description" content="Portfolio front-end web developera - Sylwia Dudzik">
+    <meta name="og:title" content="Portfolio - Sylwia Dudzik">
+    <meta name="og:image" content="https://www.redditstatic.com/avatars/avatar_default_04_FF4500.png">
+    <meta name="og:description" content="Portfolio front-end web developera - Sylwia Dudzik">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lato:ital@1&display=swap" rel="stylesheet">
+</head>
+ <body>
+     <nav>
+         <h1>Sylwik</h1>
+         <div id="nav-list">
+             <ul>
+                <li><a href="#"><span class="code">< </span>Start<span> /></span></a></li>
+                 <li><a href="#projects"><span class="code">< </span>My projects<span> /></span></a></li>
+                 <li><a href="#about-me"><span class="code">< </span>About me<span> /></span></a></li>
+                <li><a href="#contact"><span class="code">< </span>Contact<span> /></span></a></li>
+            </ul>
+         </div>
+     </nav>
+    <header>
+        <img id="triangles" src="pngkey.com-triforce-png-201540.png">
+        <img id="narwhal" src="https://images.vexels.com/media/users/3/164418/isolated/preview/f51d16a76eea280f3c86a119ecb3ce08-narwhal-swimming-polygonal-by-vexels.png">
+        <h1>Hi, my name is <span>Sylwia Dudzik</span></h1>
+        <p>I'm a front-end web developer</p>
+    </header>
+    <section id="projects">
+        <h1>Check out some on my projects!</h1>
+        <div id="projects-container">
+            <div class="project-big-box">
+                <div class="project-box">
+                    <div class="project-text">
+                        <h2>Portfolio template</h2>
+                        <div class="divider"></div>
+                        <p>#HTML #CSS #design</p>
+                    </div>
+                    <div id="portfolio-template-img" class="img"></div>
+                </div>
+            </div>
+            <div class="project-big-box">
+                <div class="project-box">
+                    <div class="project-text">
+                        <h2>Gazeta prawna</h2>
+                        <div class="divider"></div>
+                        <p>#design #HTML #CSS #SCSS</p>
+                    </div>
+                    <div id="gazeta-prawna-img" class="img"></div>
+                </div>
+            </div>
+            <div class="project-big-box">
+                <div class="project-box">
+                    <div class="project-text">
+                        <h2>WoW survey form</h2>
+                        <div class="divider"></div>
+                        <p>#design #HTML #CSS</p>
+                    </div>
+                    <div id="wow-survey-form-img" class="img"></div>
+                </div>
+            </div>
+            <div class="project-big-box">
+                <div class="project-box">
+                    <div class="project-text">
+                        <h2>Saxophones store</h2>
+                        <div class="divider"></div>
+                        <p>#design #HTML #CSS</p>
+                    </div>
+                    <div id="saxophones-store-img" class="img"></div>
+                </div>
+            </div>
+            <div class="project-big-box">
+                <div class="project-box">
+                    <div class="project-text">
+                        <h2>Technical documentatioin</h2>
+                        <div class="divider"></div>
+                        <p>#design #HTML #CSS</p>
+                    </div>
+                    <div id="technical-documentation-img" class="img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-me">
+        <h1>About me</h1>
+        <div id="info-container">
+            <div id="info">
+                <img src="hexagon.png">
+                <p>I'm a Front-End Developer for ChowNow in Los Angeles, CA.
+                    I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
+            </div>
+            <div id="skills"></div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>Let's work together</h1>
+    </section> 
+    <footer></footer>
+    <script>
+        let skillsArray = [
+            {
+                "skill": "CSS",
+                "percentage": "70%"
+            },
+            {
+                "skill": "HTML",
+                "percentage": "70%"
+            },
+            {
+                "skill": "SCSS",
+                "percentage": "60%"
+            },
+            {
+                "skill": "JavaScript",
+                "percentage": "40%"
+            },
+            {
+                "skill": "React",
+                "percentage": "20%"
+            },
+            {
+                "skill": "Angular",
+                "percentage": "10%"
+            },
+            {
+                "skill": "Node.js",
+                "percentage": "10%"
+            },
+            {
+                "skill": "Python",
+                "percentage": "0%"
+            },
+            {
+                "skill": "Gimp",
+                "percentage": "40%"
+            }
+        ];
+        for(d of skillsArray){
+            let skill = document.createElement('div');
+            document.getElementById("skills").appendChild(skill);
+            skill.className = "skill";
+        } 
+        let skillClass = document.getElementsByClassName('skill');
+        for (let i = 0; i < skillClass.length; i++) {
+            let desc = document.createElement('div');
+            desc.className = "description"; 
+            skillClass[i].appendChild(desc);
+            desc.innerText = skillsArray[i].skill;
+            let bar = document.createElement('div');
+            bar.className = "bar";
+            skillClass[i].appendChild(bar);
+            let percentage = document.createElement('div');
+            percentage.className = "percentage";
+            skillClass[i].appendChild(percentage);
+            percentage.innerText = skillsArray[i].percentage;
+        }
+        let barClass = document.getElementsByClassName('bar');
+        for (let i = 0; i < barClass.length; i++) {
+            let full = document.createElement('div');
+            full.className = "full";
+            barClass[i].appendChild(full);
+            full.style.width = skillsArray[i].percentage;
+            let circle = document.createElement('img');
+            circle.src = "round.png";
+            barClass[i].appendChild(circle);
+            circle.style.left = skillsArray[i].percentage;
+        }
+    
+    </script>
+ </body>
+</html>

@@ -15,11 +15,14 @@ $small-font: 'Lato', sans-serif;
     width: $width;
   }
 *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to top right, $medium, black);
-    background-size: cover;
+    background-image: url(background2.jpeg);
+    background-position:bottom;
+    background-attachment: fixed;
     color: $light;
     margin: 0;
     nav{
@@ -87,12 +90,6 @@ body{
             right: 0;
             bottom: 0;
         }
-        #narwhal{
-            @include box(300px, auto);
-            left: 5%;
-            top: 5%;
-            filter: invert(0);
-        }
         h1{
             font-family: $big-font;
             font-size: 35px;
@@ -110,6 +107,7 @@ body{
     section{
         padding: 50px 0 50px 0;
         border-top: solid 2px $light;
+        min-height: 100vh;
         h1{
             font-family: $big-font;
             font-size: 40px;
@@ -195,12 +193,13 @@ body{
             flex-direction: column;
             @include box(100%, 48%);
             img{
-                max-width: 70%;
+                max-width: 80%;
             }
             p{
                 padding-top: 20px;
                 text-align: justify;
                 font-family: $small-font;
+                width: 80%;
             }
         }
         #skills{
@@ -218,16 +217,16 @@ body{
                 border-radius: 10px;
                 .description {
                     @include center-content();
-                    @include box(100%, 150px);
+                    @include box(100%, 140px);
                 }
                 .bar{
-                    @include box(20%, 400px);
+                    @include box(20%, 100%);
                     display: flex;
                     border-radius: 2px;
                     background-color: #8f8ff0;
                     position: relative;
                     .full{
-                        background-color: $bright;
+                        background-color: $accent;
                         height: 100%;
                         border-radius: 2px;
                     }
@@ -235,13 +234,85 @@ body{
                         position: absolute;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        @include box(500%, auto);
+                        @include box(700%, auto);
                     }
                 }
                 .percentage{
                     @include center-content();
-                    @include box(100%, 100px);
+                    @include box(100%, 80px);
                 }
+            }
+        }
+    }
+    #contact{
+        @include center-content();
+        flex-direction: column;
+        #clock{
+            margin: 0 auto auto auto;
+            @include box(500px, 500px);
+            border: solid 5px $light;
+            background-image: radial-gradient($medium, $dark);
+            border-radius: 50%;
+            position: relative;
+            #center{
+                position: absolute;
+                background-color: $light;
+                @include box(30px, 30px);
+                border-radius: 50%;
+                z-index: 4;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .num{
+                font-family: $big-font;
+                font-size: 40px;
+                position: absolute;
+                @include box(100%, 100%);
+                text-align: center;
+                padding-top: 15px;
+                .icon{
+                    color: $accent;
+                    font-size: 45px;
+                }
+            }
+            @for $i from 1 through 12 {
+                .num:nth-child(#{$i}){
+                    transform: rotate(30deg * $i);
+                }
+                .num:nth-child(#{$i}) div{
+                    transform: rotate(-30deg * $i);
+                }
+            }
+            .hand-container{
+                position: absolute;
+                @include box(50%, 100%);
+                transform-origin: bottom center;
+                .hand{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 50px);
+                }
+            }
+            .first{
+                transform: rotate(60deg);
+            }
+            .second{
+                transform: rotate(220deg);
+            }
+            #hr{
+                @include box(150px, 8px);
+                background-color: $accent;
+                border-radius: 4px;
+            }
+            #min{
+                @include box(190px, 4px);
+                background-color: $light;
+            }
+            #sec{
+                @include box(200px, 1px);
+                background-color: $bright;
             }
         }
     }

@@ -100,54 +100,55 @@
     <section id="contact">
         <h1>It's time to work together</h1>
         <div id="clock">
-            <div class="num">
-                <div>1</div>
-            </div>
-            <div class="num">
-                <div>2</div>
-            </div>
-            <div class="num">
-                <div class="icon icon-linkedin-squared"></div>
-            </div>
-            <div class="num">
-                <div>4</div>
-            </div>
-            <div class="num">
-                <div>5</div>
-            </div>
-            <div class="num">
-                <div class="icon icon-facebook-squared"></div>
-            </div>
-            <div class="num">
-                <div>7</div>
-            </div>
-            <div class="num">
-                <div>8</div>
-            </div>
-            <div class="num">
-                <div class="icon icon-mail-alt"></div>
-            </div>
-            <div class="num">
-                <div>10</div>
-            </div>
-            <div class="num">
-                <div>11</div>
-            </div>
-            <div class="num">
-                <div class="icon icon-github-circled-alt2"></div>
-            </div>
             <div id="center"></div>
-            <div class="hand-container first">
+            <div id="hr-hand" class="hand-container">
                 <div id="hr" class="hand"></div>
             </div>
-            <div class="hand-container">
+            <div id="min-hand" class="hand-container">
                 <div id="min" class="hand"></div>
             </div>
-            <div class="hand-container second">
+            <div id="sec-hand" class="hand-container">
                 <div id="sec" class="hand"></div>
             </div>
+            <div id="num">
+                <div class="num">
+                        <a class="num-a">1</a>
+                </div>
+                <div class="num">
+                        <a class="num-a">2</a>
+                </div>
+                <div class="num">
+                        <a href="" class="num-a icon icon-linkedin-squared"></a>
+                </div>
+                <div class="num">
+                    <a class="num-a">4</a>
+                </div>
+                <div class="num">
+                    <a class="num-a">5</a>
+                </div>
+                <div class="num">
+                    <a href="" class="num-a icon icon-facebook-squared"></a>
+                </div>
+                <div class="num">
+                    <a class="num-a">7</a>
+                </div>
+                <div class="num">
+                    <a class="num-a">8</a>
+                </div>
+                <div class="num">
+                    <a href="" class="num-a icon icon-mail-alt"></a>
+                </div>
+                <div class="num">
+                    <a class="num-a">10</a>
+                </div>
+                <div class="num">
+                    <a class="num-a">11</a>
+                </div>
+                <div class="num">
+                    <a href="" class="num-a icon icon-github-circled-alt2"></a>
+                </div>
+            </div>
         </div>
-
     </section> 
     <footer></footer>
     <script>
@@ -220,6 +221,28 @@
             circle.style.left = skillsArray[i].percentage;
         }
     
+    </script>
+    <script>
+        const hrHand = document.getElementById("hr-hand");
+        const minHand = document.getElementById("min-hand");
+        let numArr = document.getElementsByClassName("num-a");
+        
+        for(let i = 1; i < 13; i++){
+            numArr[i-1].onmouseover = function(){
+                let n = i * 30;
+                hrHand.style.transform = 'rotate('+n+'deg)';
+                minHand.style.transform = 'rotate(360deg)';
+                };
+        };
+        
+        const secHand = document.getElementById("sec-hand");
+        let n = 6;
+        function secRotate(){
+            secHand.style.transform = 'rotate('+n+'deg)';
+            n += 6;
+        };
+        setInterval(secRotate, 1000);
+        
     </script>
  </body>
 </html>

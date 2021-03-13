@@ -259,28 +259,42 @@ body{
                 background-color: $light;
                 @include box(30px, 30px);
                 border-radius: 50%;
-                z-index: 4;
+                z-index: 1;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }
+            #num{
+                @include box(100%, 100%);
+                position: relative;
             }
             .num{
                 font-family: $big-font;
                 font-size: 40px;
                 position: absolute;
-                @include box(100%, 100%);
+                left: 50%;
+                @include box(50%, 50px);
+                transform-origin: bottom center;
                 text-align: center;
                 padding-top: 15px;
                 .icon{
                     color: $accent;
                     font-size: 45px;
                 }
+                a{
+                    text-decoration: none;
+                    color: $light;
+                    display: block;
+                }
+                a:hover {
+                    color: $bright;
+                }
             }
             @for $i from 1 through 12 {
                 .num:nth-child(#{$i}){
-                    transform: rotate(30deg * $i);
+                    transform: translate(-50%, 0) rotate(30deg * $i);
                 }
-                .num:nth-child(#{$i}) div{
+                .num:nth-child(#{$i}) a{
                     transform: rotate(-30deg * $i);
                 }
             }
@@ -295,11 +309,14 @@ body{
                     transform: translate(-50%, 50px);
                 }
             }
-            .first{
-                transform: rotate(60deg);
+            .hand-container:nth-child(2){
+                transition: all 1s ease-in-out;
             }
-            .second{
-                transform: rotate(220deg);
+            .hand-container:nth-child(3){
+                transition: all 1s ease-in-out;
+            }
+            .hand-container:nth-child(4){
+                transition: all 0.1s ease-in-out;
             }
             #hr{
                 @include box(150px, 8px);

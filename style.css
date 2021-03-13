@@ -272,17 +272,24 @@ body #contact #clock #center {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  z-index: 4;
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+body #contact #clock #num {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 body #contact #clock .num {
   font-family: "Josefin Sans", sans-serif;
   font-size: 40px;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  left: 50%;
+  height: 50%;
+  width: 50px;
+  transform-origin: bottom center;
   text-align: center;
   padding-top: 15px;
 }
@@ -290,76 +297,84 @@ body #contact #clock .num .icon {
   color: #ff295e;
   font-size: 45px;
 }
-body #contact #clock .num:nth-child(1) {
-  transform: rotate(30deg);
+body #contact #clock .num a {
+  text-decoration: none;
+  color: #C5C5F7;
+  display: block;
 }
-body #contact #clock .num:nth-child(1) div {
+body #contact #clock .num a:hover {
+  color: #2727ff;
+}
+body #contact #clock .num:nth-child(1) {
+  transform: translate(-50%, 0) rotate(30deg);
+}
+body #contact #clock .num:nth-child(1) a {
   transform: rotate(-30deg);
 }
 body #contact #clock .num:nth-child(2) {
-  transform: rotate(60deg);
+  transform: translate(-50%, 0) rotate(60deg);
 }
-body #contact #clock .num:nth-child(2) div {
+body #contact #clock .num:nth-child(2) a {
   transform: rotate(-60deg);
 }
 body #contact #clock .num:nth-child(3) {
-  transform: rotate(90deg);
+  transform: translate(-50%, 0) rotate(90deg);
 }
-body #contact #clock .num:nth-child(3) div {
+body #contact #clock .num:nth-child(3) a {
   transform: rotate(-90deg);
 }
 body #contact #clock .num:nth-child(4) {
-  transform: rotate(120deg);
+  transform: translate(-50%, 0) rotate(120deg);
 }
-body #contact #clock .num:nth-child(4) div {
+body #contact #clock .num:nth-child(4) a {
   transform: rotate(-120deg);
 }
 body #contact #clock .num:nth-child(5) {
-  transform: rotate(150deg);
+  transform: translate(-50%, 0) rotate(150deg);
 }
-body #contact #clock .num:nth-child(5) div {
+body #contact #clock .num:nth-child(5) a {
   transform: rotate(-150deg);
 }
 body #contact #clock .num:nth-child(6) {
-  transform: rotate(180deg);
+  transform: translate(-50%, 0) rotate(180deg);
 }
-body #contact #clock .num:nth-child(6) div {
+body #contact #clock .num:nth-child(6) a {
   transform: rotate(-180deg);
 }
 body #contact #clock .num:nth-child(7) {
-  transform: rotate(210deg);
+  transform: translate(-50%, 0) rotate(210deg);
 }
-body #contact #clock .num:nth-child(7) div {
+body #contact #clock .num:nth-child(7) a {
   transform: rotate(-210deg);
 }
 body #contact #clock .num:nth-child(8) {
-  transform: rotate(240deg);
+  transform: translate(-50%, 0) rotate(240deg);
 }
-body #contact #clock .num:nth-child(8) div {
+body #contact #clock .num:nth-child(8) a {
   transform: rotate(-240deg);
 }
 body #contact #clock .num:nth-child(9) {
-  transform: rotate(270deg);
+  transform: translate(-50%, 0) rotate(270deg);
 }
-body #contact #clock .num:nth-child(9) div {
+body #contact #clock .num:nth-child(9) a {
   transform: rotate(-270deg);
 }
 body #contact #clock .num:nth-child(10) {
-  transform: rotate(300deg);
+  transform: translate(-50%, 0) rotate(300deg);
 }
-body #contact #clock .num:nth-child(10) div {
+body #contact #clock .num:nth-child(10) a {
   transform: rotate(-300deg);
 }
 body #contact #clock .num:nth-child(11) {
-  transform: rotate(330deg);
+  transform: translate(-50%, 0) rotate(330deg);
 }
-body #contact #clock .num:nth-child(11) div {
+body #contact #clock .num:nth-child(11) a {
   transform: rotate(-330deg);
 }
 body #contact #clock .num:nth-child(12) {
-  transform: rotate(360deg);
+  transform: translate(-50%, 0) rotate(360deg);
 }
-body #contact #clock .num:nth-child(12) div {
+body #contact #clock .num:nth-child(12) a {
   transform: rotate(-360deg);
 }
 body #contact #clock .hand-container {
@@ -374,11 +389,14 @@ body #contact #clock .hand-container .hand {
   left: 50%;
   transform: translate(-50%, 50px);
 }
-body #contact #clock .first {
-  transform: rotate(60deg);
+body #contact #clock .hand-container:nth-child(2) {
+  transition: all 1s ease-in-out;
 }
-body #contact #clock .second {
-  transform: rotate(220deg);
+body #contact #clock .hand-container:nth-child(3) {
+  transition: all 1s ease-in-out;
+}
+body #contact #clock .hand-container:nth-child(4) {
+  transition: all 0.1s ease-in-out;
 }
 body #contact #clock #hr {
   height: 150px;

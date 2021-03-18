@@ -2,42 +2,41 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url(background2.jpeg);
-  background-position: bottom;
   background-attachment: fixed;
+  background-image: linear-gradient(to bottom, #070736, #000000);
   color: #C5C5F7;
   margin: 0;
+  overflow-x: hidden;
 }
 body nav {
   position: fixed;
-  width: 100%;
+  top: 0;
   font-family: "Josefin Sans", sans-serif;
   display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 10px;
   z-index: 1;
-}
-body nav h1 {
-  font-size: 40px;
-  padding: 0 0 0 20px;
-  margin: 0;
-  color: #ff295e;
+  transition: top 0.9s;
 }
 body nav #nav-list {
   display: flex;
-  width: 720px;
 }
 body nav #nav-list ul {
   display: flex;
+  flex-wrap: nowrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 750px;
 }
 body nav #nav-list ul li {
-  float: left;
   padding: 0 2% 0 2%;
   font-size: 26px;
 }
@@ -56,14 +55,52 @@ body nav #nav-list ul li a:hover span {
 body nav #nav-list ul li:last-of-type {
   padding-right: 0;
 }
+body nav #burger {
+  display: none;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+body nav #burger div {
+  display: block;
+  margin: 10px auto 0 auto;
+  background-color: #C5C5F7;
+  height: 4px;
+  border-radius: 1px;
+}
+body nav #burger #line1 {
+  width: 50px;
+  transition-duration: 1s;
+}
+body nav #burger #line2 {
+  width: 30px;
+  transition-duration: 1s;
+}
+body nav #burger #line3 {
+  width: 10px;
+  transition-duration: 1s;
+}
+body nav .x #line1 {
+  transform: rotate(180deg) translate(0, -30px);
+  transition-duration: 1s;
+}
+body nav .x #line2 {
+  transform: rotate(180deg);
+  transition-duration: 1s;
+}
+body nav .x #line3 {
+  transform: rotate(180deg) translate(0, 30px);
+  transition-duration: 1s;
+}
 body header {
   height: 100vh;
   width: 100%;
-  padding: 0 10% 0 10%;
+  padding: 0 5% 0 5%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 body header img {
   display: block;
@@ -71,8 +108,8 @@ body header img {
   z-index: -1;
 }
 body header #triangles {
-  max-width: 60%;
-  max-height: 90%;
+  max-width: 70%;
+  max-height: 70%;
   right: 0;
   bottom: 0;
 }
@@ -256,6 +293,7 @@ body #contact {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 0;
 }
 body #contact #clock {
   margin: 0 auto auto auto;
@@ -388,12 +426,7 @@ body #contact #clock .hand-container .hand {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50px);
-}
-body #contact #clock .hand-container:nth-child(2) {
-  transition: all 1s ease-in-out;
-}
-body #contact #clock .hand-container:nth-child(3) {
-  transition: all 1s ease-in-out;
+  transition-timing-function: ease-out;
 }
 body #contact #clock .hand-container:nth-child(4) {
   transition: all 0.1s ease-in-out;
@@ -414,9 +447,79 @@ body #contact #clock #sec {
   width: 1px;
   background-color: #2727ff;
 }
+body #contact #footer {
+  justify-self: flex-end;
+  background-color: #000000;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-@media screen and (max-width: 900px) {
-  #nav-list a {
+@media screen and (max-width: 800px) {
+  #nav-list {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 220px;
+    top: 0;
+    background-color: #070736;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  #nav-list ul {
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
+  #nav-list ul li {
+    opacity: 0;
+  }
+  #nav-list ul li a {
+    color: #ff295e !important;
+    font-size: 26px;
+  }
+
+  #burger {
+    display: block !important;
+    margin-right: 75px;
+    z-index: 2;
+  }
+
+  .nav-active {
+    transform: translateX(0%) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  #clock {
     display: none;
+  }
+}
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=style.css.map */

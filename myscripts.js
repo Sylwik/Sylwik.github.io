@@ -1,3 +1,46 @@
+// nav
+
+const navSlide = ()=>{
+    const burger = document.querySelector("#burger");
+    const nav = document.querySelector("#nav-list");
+    const navLinks = document.querySelectorAll("#nav-list li");
+    burger.addEventListener('click', ()=>{
+        nav.classList.toggle('nav-active'); 
+        navLinks.forEach((link, index)=>{
+            if(link.style.animation){
+                link.style.animation = '';
+            }else{
+                link.style.animation = `navLinkFade 0.5s ${index/4 + 0.5}s`;
+                link.style.animationFillMode = "forwards";
+            }
+        });
+        burger.classList.toggle('x');
+    });
+};
+navSlide();
+
+    //Hiding navbar
+
+var prevScrollpos = window.pageYOffset;
+window.addEventListener('scroll', ()=>{
+    if(window.innerWidth > 800){
+        if (prevScrollpos > window.pageYOffset) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+          prevScrollpos = window.pageYOffset;
+    }
+});
+
+// triangles moving while scrolling
+
+const triangles = document.getElementById("triangles");
+window.onscroll = function (){
+    triangles.style.bottom = window.pageYOffset + "px";
+    triangles.style.opacity = (100 - (window.pageYOffset)/5) + "%";
+};
+
 // skills
 
 let skillsArray = [
@@ -36,13 +79,17 @@ let skillsArray = [
     {
         "skill": "Gimp",
         "percentage": "40%"
+    },
+    {
+        "skill": "jQuery",
+        "percentage": "10%"
     }
 ];
 for(d of skillsArray){
     let skill = document.createElement('div');
     document.getElementById("skills").appendChild(skill);
     skill.className = "skill";
-} 
+};
 let skillClass = document.getElementsByClassName('skill');
 for (let i = 0; i < skillClass.length; i++) {
     let desc = document.createElement('div');
@@ -56,7 +103,7 @@ for (let i = 0; i < skillClass.length; i++) {
     percentage.className = "percentage";
     skillClass[i].appendChild(percentage);
     percentage.innerText = skillsArray[i].percentage;
-}
+};
 let barClass = document.getElementsByClassName('bar');
 for (let i = 0; i < barClass.length; i++) {
     let full = document.createElement('div');
@@ -67,26 +114,53 @@ for (let i = 0; i < barClass.length; i++) {
     circle.src = "round.png";
     barClass[i].appendChild(circle);
     circle.style.left = skillsArray[i].percentage;
-}
+};
 
-// zegar
+// clock
+
 
 const hrHand = document.getElementById("hr-hand");
 const minHand = document.getElementById("min-hand");
 let numArr = document.getElementsByClassName("num-a");
-
-for(let i = 1; i < 13; i++){
-    numArr[i-1].onmouseover = function(){
-        let n = i * 30;
-        hrHand.style.transform = 'rotate('+n+'deg)';
-        minHand.style.transform = 'rotate(360deg)';
+let lastPosition = 11;
+let newPosition;
+let dif;
+let lastHrAngle = 0;
+let newHrAngle;
+let minAngle = 0;
+for(let i = 0; i < 12; i++){
+    numArr[i].onmouseover = function(){
+        newPosition = i;
+        dif = newPosition - lastPosition;
+        if(dif >= 7){
+            newHrAngle = lastHrAngle - 30*(12-dif);
+            hrHand.style.transitionDuration = ""+(Math.abs((newHrAngle - lastHrAngle)/50))+"s";
+            hrHand.style.transform = 'rotate('+newHrAngle+'deg)';
+        }
+        else if(dif <= -6){
+            newHrAngle = lastHrAngle + 30*(12+dif);
+            hrHand.style.transitionDuration = ""+(Math.abs((newHrAngle - lastHrAngle)/50))+"s";
+            hrHand.style.transform = 'rotate('+newHrAngle+'deg)';
+        }
+        else if(lastPosition != newPosition){
+            newHrAngle = lastHrAngle + 30*dif;
+            hrHand.style.transitionDuration = ""+(Math.abs((newHrAngle - lastHrAngle)/50))+"s";
+            hrHand.style.transform = 'rotate('+newHrAngle+'deg)';
+        }
+        if (lastPosition != newPosition){
+            minAngle = minAngle + 360*(newHrAngle - lastHrAngle)/30;
+            minHand.style.transitionDuration = ""+(Math.abs((newHrAngle - lastHrAngle)/50))+"s";
+            minHand.style.transform = 'rotate('+minAngle+'deg)';
+        }
+        lastPosition = i;
+        lastHrAngle = newHrAngle;
         };
 };
 
 const secHand = document.getElementById("sec-hand");
-let n = 6;
+let m = 6;
 function secRotate(){
-    secHand.style.transform = 'rotate('+n+'deg)';
-    n += 6;
+    secHand.style.transform = 'rotate('+m+'deg)';
+    m += 6;
 };
 setInterval(secRotate, 1000);

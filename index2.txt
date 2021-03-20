@@ -117,3 +117,54 @@
             <div id="technical-documentation-img" class="img"></div>
         </div>
     </div>
+
+    <div class="swiper-slide">
+                        <a href="#" class="project-box">
+                            <img src="page2.jpg">
+                            <div class="project-text">
+                                <h2>Portfolio template</h2>
+                                <div class="divider"></div>
+                                <p>#HTML #CSS #design</p>
+                            </div>
+                        </a>
+                    </div>
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page1.jpg">
+                        <div class="project-text">
+                            <h2>Gazeta prawna</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page3.jpg">
+                        <div class="project-text">
+                            <h2>WoW survey form</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page4.jpg">
+                        <div class="project-text">
+                            <h2>Saxophones store</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page5.jpg">
+                        <div class="project-text">
+                            <h2>Technical documentation</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
+                    </div>
+                  </div>

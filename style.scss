@@ -176,6 +176,8 @@ body{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                color: $light;
+                text-decoration: none;
                 .project-text{
                     margin: 0;
                     display: flex;
@@ -218,9 +220,20 @@ body{
             @include center-content();
             flex-direction: column;
             @include box(100%, 48%);
-            img{
-                max-width: 50%;
+            #img-container{
+                @include box(auto, 100%);
+                @include center-content();
                 max-height: 400px;
+                max-width: 70%;
+                border-radius: 50%;
+                background-color: $bright;
+                img{
+                    max-height: 400px;
+                    max-width: 100%;
+                }
+            }
+            #img-container:hover {
+                background-color: $accent;
             }
             p{
                 padding-top: 20px;
@@ -236,15 +249,15 @@ body{
             flex-direction: column;
             .skill{
                 @include center-content();
-                @include box(30px, 100%);
-                margin-bottom: 20px;
+                @include box(40px, 100%);
+                margin-bottom: 10px;
                 color: $light;
-                background-color: $bright;
+                background-color: $dark;
                 font-family: $big-font;
-                //border-radius: 10px;
                 .description {
                     @include center-content();
-                    @include box(100%, 140px);
+                    @include box(100%, 160px);
+                    letter-spacing: 1px;
                 }
                 .bar{
                     @include box(20%, 100%);
@@ -398,6 +411,16 @@ body{
     }
     .nav-active{
         transform: translateX(0%) !important;
+    }
+    #info-container{
+        flex-direction: column;
+        #info{
+            width: 100% !important;
+            margin-bottom: 30px;
+        }
+        #skills{
+            width: 100% !important;
+        }
     }
 }
 @media screen and (max-width:500px){

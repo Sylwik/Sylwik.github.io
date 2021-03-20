@@ -1,4 +1,4 @@
-// nav
+// nav slide
 
 const navSlide = ()=>{
     const burger = document.querySelector("#burger");
@@ -41,7 +41,75 @@ window.onscroll = function (){
     triangles.style.opacity = (100 - (window.pageYOffset)/5) + "%";
 };
 
-// skills
+// projects array
+
+let projectsArray = [
+    {
+        "img": "page1.jpg",
+        "title": "Gazeta prawna",
+        "tags": "#HTML #CSS #design",
+        "href": "#"
+    },
+    {
+        "img": "page2.jpg",
+        "title": "Portfolio template",
+        "tags": "#HTML #CSS #design",
+        "href": "#"
+    },
+    {
+        "img": "page3.jpg",
+        "title": "WoW survey form",
+        "tags": "#HTML #CSS #design",
+        "href": "#"
+    },
+    {
+        "img": "page4.jpg",
+        "title": "Saxophones store",
+        "tags": "#HTML #CSS #design",
+        "href": "#"
+    },
+    {
+        "img": "page5.jpg",
+        "title": "Technical documentation",
+        "tags": "#HTML #CSS #design",
+        "href": "#"
+    }
+];
+for (let i = 0; i < projectsArray.length; i++){
+    let project = document.createElement('div');
+    document.getElementById("swiper-wrapper").appendChild(project);
+    project.className = "swiper-slide";
+}
+let swiperSlide = document.getElementsByClassName("swiper-slide");
+for (let i = 0; i < swiperSlide.length; i++){
+    let projectBox = document.createElement('a');
+    projectBox.className = "project-box";
+    projectBox.href = projectsArray[i].href;
+    swiperSlide[i].appendChild(projectBox);
+};
+let projectBox = document.getElementsByClassName("project-box");
+for(let i = 0; i < projectBox.length; i++){
+    let img = document.createElement('img');
+    img.src = projectsArray[i].img;
+    projectBox[i].appendChild(img);
+    let projectText = document.createElement('div');
+    projectText.className = "project-text";
+    projectBox[i].appendChild(projectText);
+};
+let projectText = document.getElementsByClassName("project-text");
+for (let i = 0; i < projectText.length; i++){
+    let header = document.createElement('h2');
+    header.innerText = projectsArray[i].title;
+    projectText[i].appendChild(header);
+    let divider = document.createElement('div');
+    divider.className = "divider";
+    projectText[i].appendChild(divider);
+    let tags = document.createElement('p');
+    tags.innerText = projectsArray[i].tags;
+    projectText[i].appendChild(tags);
+};
+
+// skills array
 
 let skillsArray = [
     {
@@ -116,6 +184,12 @@ for (let i = 0; i < barClass.length; i++) {
     circle.style.left = skillsArray[i].percentage;
 };
 
+// skills animation
+
+if(window.pageYOffset >= 1050){
+    
+}
+
 // clock
 
 const hrHand = document.getElementById("hr-hand");
@@ -163,3 +237,5 @@ function secRotate(){
     m += 6;
 };
 setInterval(secRotate, 1000);
+
+

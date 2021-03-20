@@ -118,7 +118,6 @@ for (let i = 0; i < barClass.length; i++) {
 
 // clock
 
-
 const hrHand = document.getElementById("hr-hand");
 const minHand = document.getElementById("min-hand");
 let numArr = document.getElementsByClassName("num-a");

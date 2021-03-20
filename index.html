@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lato:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontello-4e40d086/css/fontello.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
  <body>
      <nav id="navbar">
@@ -38,54 +39,60 @@
     <section id="projects">
         <h1>Check out some on my projects!</h1>
         <div id="projects-container">
-            <div class="project-big-box">
-                <div class="project-box">
-                    <div class="project-text">
-                        <h2>Portfolio template</h2>
-                        <div class="divider"></div>
-                        <p>#HTML #CSS #design</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page2.jpg">
+                        <div class="project-text">
+                            <h2>Portfolio template</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
                     </div>
-                    <div id="portfolio-template-img" class="img"></div>
-                </div>
-            </div>
-            <div class="project-big-box">
-                <div class="project-box">
-                    <div class="project-text">
-                        <h2>Gazeta prawna</h2>
-                        <div class="divider"></div>
-                        <p>#design #HTML #CSS #SCSS</p>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page1.jpg">
+                        <div class="project-text">
+                            <h2>Gazeta prawna</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
                     </div>
-                    <div id="gazeta-prawna-img" class="img"></div>
-                </div>
-            </div>
-            <div class="project-big-box">
-                <div class="project-box">
-                    <div class="project-text">
-                        <h2>WoW survey form</h2>
-                        <div class="divider"></div>
-                        <p>#design #HTML #CSS</p>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page3.jpg">
+                        <div class="project-text">
+                            <h2>WoW survey form</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
                     </div>
-                    <div id="wow-survey-form-img" class="img"></div>
-                </div>
-            </div>
-            <div class="project-big-box">
-                <div class="project-box">
-                    <div class="project-text">
-                        <h2>Saxophones store</h2>
-                        <div class="divider"></div>
-                        <p>#design #HTML #CSS</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page4.jpg">
+                        <div class="project-text">
+                            <h2>Saxophones store</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
                     </div>
-                    <div id="saxophones-store-img" class="img"></div>
-                </div>
-            </div>
-            <div class="project-big-box">
-                <div class="project-box">
-                    <div class="project-text">
-                        <h2>Technical documentatioin</h2>
-                        <div class="divider"></div>
-                        <p>#design #HTML #CSS</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="page5.jpg">
+                        <div class="project-text">
+                            <h2>Technical documentation</h2>
+                            <div class="divider"></div>
+                            <p>#HTML #CSS #design</p>
+                        </div>
                     </div>
-                    <div id="technical-documentation-img" class="img"></div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -94,7 +101,7 @@
         <h1>About me</h1>
         <div id="info-container">
             <div id="info">
-                <img src="hexagon.png">
+                <img src="ja2.png">
                 <p>I'm a Front-End Developer for ChowNow in Los Angeles, CA.
                     I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
             </div>
@@ -122,7 +129,7 @@
                         <a class="num-a">2</a>
                 </div>
                 <div class="num">
-                        <a href="" class="num-a icon icon-linkedin-squared"></a>
+                        <a href=""  target="_blank" class="num-a icon icon-linkedin-squared"></a>
                 </div>
                 <div class="num">
                     <a class="num-a">4</a>
@@ -131,7 +138,7 @@
                     <a class="num-a">5</a>
                 </div>
                 <div class="num">
-                    <a href="" class="num-a icon icon-facebook-squared"></a>
+                    <a href=""  target="_blank" class="num-a icon icon-facebook-squared"></a>
                 </div>
                 <div class="num">
                     <a class="num-a">7</a>
@@ -140,7 +147,7 @@
                     <a class="num-a">8</a>
                 </div>
                 <div class="num">
-                    <a href="" class="num-a icon icon-mail-alt"></a>
+                    <a href="" target="_blank" class="num-a icon icon-mail-alt"></a>
                 </div>
                 <div class="num">
                     <a class="num-a">10</a>
@@ -149,7 +156,7 @@
                     <a class="num-a">11</a>
                 </div>
                 <div class="num">
-                    <a href="" class="num-a icon icon-github-circled-alt2"></a>
+                    <a href="https://github.com/Sylwik"  target="_blank" class="num-a icon icon-github-circled-alt2"></a>
                 </div>
             </div>
         </div>
@@ -159,5 +166,25 @@
     </section> 
     
    <script src="myscripts.js"></script>
- </body>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
 </html>

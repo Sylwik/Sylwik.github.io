@@ -1,0 +1,119 @@
+// scss
+#projects-container{
+            display:flex;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                .project-box{
+                    @include box(230px, 450px);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    
+                    .project-text{
+                        margin: auto 0 auto 0;
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        font-family: $small-font;
+                        font-size: 14px;
+                        text-align:left;
+                        h2{
+                            margin: 5px;
+                        }
+                        p{
+                            margin: 5px;
+                            font-size: 14px;
+                            width: 70%;
+
+                        }
+                        .divider{
+                            @include box(3px, 100%);
+                            background-color: $light;
+                        }
+                    }
+                    .img{
+                        z-index: -1;
+                        background-size: cover;
+                        position: absolute;
+                        right: 0;
+                        box-shadow: inset 30px 30px 50px black;
+                    }
+                    #gazeta-prawna-img{
+                        @include box(180px, 300px);
+                        background-image: url(page1.jpg);
+                    }
+                    #portfolio-template-img{
+                        @include box(140px, 300px);
+                        background-image: url(page2.jpg);
+                    }
+                    #wow-survey-form-img{
+                        @include box(170px, 300px);
+                        background-image: url(page3.jpg);
+                    }
+                    #saxophones-store-img{
+                        @include box(180px, 300px);
+                        background-image: url(page4.jpg);
+                    }
+                    #technical-documentation-img{
+                        @include box(120px, 300px);
+                        background-image: url(page5.jpg);
+                    }
+                }
+                .project-big-box:nth-child(3n){
+                    width: 100%;
+                    @include center-content();
+                }
+        }
+
+// html
+    <div class="project-big-box">
+        <div class="project-box">
+            <div class="project-text">
+                <h2>Portfolio template</h2>
+                <div class="divider"></div>
+                <p>#HTML #CSS #design</p>
+            </div>
+            <div id="portfolio-template-img" class="img"></div>
+        </div>
+    </div>
+    <div class="project-big-box">
+        <div class="project-box">
+            <div class="project-text">
+                <h2>Gazeta prawna</h2>
+                <div class="divider"></div>
+                <p>#design #HTML #CSS #SCSS</p>
+            </div>
+            <div id="gazeta-prawna-img" class="img"></div>
+        </div>
+    </div>
+    <div class="project-big-box">
+        <div class="project-box">
+            <div class="project-text">
+                <h2>WoW survey form</h2>
+                <div class="divider"></div>
+                <p>#design #HTML #CSS</p>
+            </div>
+            <div id="wow-survey-form-img" class="img"></div>
+        </div>
+    </div>
+    <div class="project-big-box">
+        <div class="project-box">
+            <div class="project-text">
+                <h2>Saxophones store</h2>
+                <div class="divider"></div>
+                <p>#design #HTML #CSS</p>
+            </div>
+            <div id="saxophones-store-img" class="img"></div>
+        </div>
+    </div>
+    <div class="project-big-box">
+        <div class="project-box">
+            <div class="project-text">
+                <h2>Technical documentation</h2>
+                <div class="divider"></div>
+                <p>#design #HTML #CSS</p>
+            </div>
+            <div id="technical-documentation-img" class="img"></div>
+        </div>
+    </div>

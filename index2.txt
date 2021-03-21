@@ -128,6 +128,7 @@
                             </div>
                         </a>
                     </div>
+
                   <div class="swiper-slide">
                     <div class="project-box">
                         <img src="page1.jpg">
@@ -138,6 +139,7 @@
                         </div>
                     </div>
                   </div>
+                  
                   <div class="swiper-slide">
                     <div class="project-box">
                         <img src="page3.jpg">

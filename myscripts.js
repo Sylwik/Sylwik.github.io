@@ -171,6 +171,10 @@ for (let i = 0; i < skillClass.length; i++) {
     percentage.className = "percentage";
     skillClass[i].appendChild(percentage);
     percentage.innerText = skillsArray[i].percentage;
+    for(let j = 0; j < 4; j++){
+        let span = document.createElement('span');
+        skillClass[i].appendChild(span);
+    }; 
 };
 let barClass = document.getElementsByClassName('bar');
 for (let i = 0; i < barClass.length; i++) {

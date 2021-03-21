@@ -24,7 +24,8 @@ html {
   }
 body{
     background-attachment: fixed;
-    background-image: linear-gradient(to bottom, $medium, $dark);
+    background-image: linear-gradient(-30deg, $medium 0%, $medium 50%, $dark 50%, $light 100%);
+    background-size: cover;
     color: $light;
     margin: 0;
     overflow-x: hidden;
@@ -226,14 +227,14 @@ body{
                 max-height: 400px;
                 max-width: 70%;
                 border-radius: 50%;
-                background-color: $bright;
+                background-color: rgb(39, 39, 255, 0.5);
                 img{
                     max-height: 400px;
                     max-width: 100%;
                 }
             }
             #img-container:hover {
-                background-color: $accent;
+                background-color: rgb(255, 41, 94, 0.5);
             }
             p{
                 padding-top: 20px;
@@ -252,8 +253,50 @@ body{
                 @include box(40px, 100%);
                 margin-bottom: 10px;
                 color: $light;
-                background-color: $dark;
+                background-color: rgba(0,0,0,0.7);
                 font-family: $big-font;
+                position: relative;
+                overflow: hidden;
+                span{
+                   transition: 0.5;
+                   position: absolute; 
+                   opacity: 0;
+                }
+                span:nth-child(4){
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: linear-gradient(to right, transparent, $bright);  
+                    animation: skill-light-right 2s linear infinite;
+                }
+                span:nth-child(5){
+                    top: 0;
+                    right: 0;
+                    width: 3px;
+                    height: 100%;
+                    background: linear-gradient(to bottom, transparent, $bright);  
+                    animation: skill-light-down 2s linear infinite;
+                    animation-delay: 1s;
+                    
+                }
+                span:nth-child(6){
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: linear-gradient(to left, transparent, $bright);  
+                    animation: skill-light-left 2s linear infinite;
+                }
+                span:nth-child(7){
+                    bottom: 0;
+                    left: 0;
+                    width: 3px;
+                    height: 100%;
+                    background: linear-gradient(to top, transparent, $bright);  
+                    animation: skill-light-up 2s linear infinite;
+                    animation-delay: 1s;
+                }
                 .description {
                     @include center-content();
                     @include box(100%, 160px);
@@ -274,7 +317,7 @@ body{
                         position: absolute;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        @include box(700%, auto);
+                        @include box(500%, auto);
                     }
                 }
                 .percentage{
@@ -282,17 +325,21 @@ body{
                     @include box(100%, 80px);
                 }
             }
+            .skill:hover span{
+                opacity: 1;
+            }
         }
     }
     #contact{
         @include center-content();
         flex-direction: column;
         padding-bottom: 0;
+        position: relative;
         #clock{
             margin: 0 auto auto auto;
             @include box(500px, 500px);
-            border: solid 5px $light;
-            background-image: radial-gradient($medium, $dark);
+            background-color: rgba(255,255,255, 0.1);
+            box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.8);
             border-radius: 50%;
             position: relative;
             #center{
@@ -368,14 +415,42 @@ body{
                 background-color: $bright;
             }
         }
+        #clock::after{
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%, transparent 70%, rgba(0,0,0,0.9) 100%);
+        }
+        #small-contact{
+            @include center-content();
+            display: none;
+            font-size: 40px;
+            text-align: center;
+            padding-top: 15px;
+            letter-spacing: 20px;
+                a{
+                    color: $accent;
+                    font-size: 45px;
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: $bright;
+                }
+        }
         #footer{
             justify-self: flex-end;
             background-color: $dark;
             @include box(40px, 100%);
             @include center-content();
+            position: absolute;
+            bottom: 0;
         }
     } 
-    
 }
 @media screen and (max-width:800px){
     #nav-list{
@@ -408,6 +483,8 @@ body{
         display: block !important;
         margin-right: 75px;
         z-index: 2;
+        position: absolute;
+        top: 10px;
     }
     .nav-active{
         transform: translateX(0%) !important;
@@ -427,6 +504,9 @@ body{
     #clock{
         display: none;
     }
+    #small-contact{
+        display: block !important;
+    }
 }
 @keyframes navLinkFade{
     from{
@@ -436,5 +516,37 @@ body{
     to{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@keyframes skill-light-right{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes skill-light-down{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+@keyframes skill-light-left{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes skill-light-up{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
     }
 }

@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lato:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontello-4e40d086/css/fontello.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
  <body>
      <nav id="navbar">
@@ -49,9 +50,8 @@
         <h1>About me</h1>
         <div id="info-container">
             <div id="info">
-                <div id="img-container">
-                    <img id="ja" src="ja2.png">
-                </div>
+                <img id="ja" src="ja2.png">
+                
                 <p>I'm a Front-End Developer for ChowNow in Los Angeles, CA.
                     I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
             </div>
@@ -120,6 +120,13 @@
             <p>Handcrafted by &copy; Sylwia Dudzik</p>
         </div>
     </section> 
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        delay: 100
+    });
+  </script>
    <script src="myscripts.js"></script>
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script>

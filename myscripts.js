@@ -153,10 +153,15 @@ let skillsArray = [
         "percentage": "10%"
     }
 ];
+let delay = 0;
 for(d of skillsArray){
     let skill = document.createElement('div');
     document.getElementById("skills").appendChild(skill);
     skill.className = "skill";
+    skill.setAttribute("data-aos", "fade-up");
+    skill.setAttribute("data-aos-delay", delay);
+    skill.setAttribute("data-aos-offset", 0);
+    delay += 150;
 };
 let skillClass = document.getElementsByClassName('skill');
 for (let i = 0; i < skillClass.length; i++) {

@@ -215,18 +215,7 @@ body #info-container #info {
   height: 100%;
   width: 48%;
 }
-body #info-container #info #img-container {
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 400px;
-  max-width: 70%;
-  border-radius: 50%;
-  background-color: rgba(39, 39, 255, 0.5);
-}
-body #info-container #info #img-container img {
+body #info-container #info img {
   max-height: 400px;
   max-width: 100%;
 }

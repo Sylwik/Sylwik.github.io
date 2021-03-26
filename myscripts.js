@@ -47,7 +47,7 @@ let projectsArray = [
     {
         "img": "page1.jpg",
         "title": "Gazeta prawna",
-        "tags": "#HTML #CSS #design",
+        "tags": "#HTML #SCSS #design",
         "href": "#"
     },
     {
@@ -70,9 +70,9 @@ let projectsArray = [
     },
     {
         "img": "page5.jpg",
-        "title": "Technical documentation",
-        "tags": "#HTML #CSS #design",
-        "href": "#"
+        "title": "Random quotes machine",
+        "tags": "#React #CSS #design",
+        "href": "https://sylwik.github.io/Random-quote-machine/"
     }
 ];
 for (let i = 0; i < projectsArray.length; i++){

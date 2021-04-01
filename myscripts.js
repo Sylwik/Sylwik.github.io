@@ -45,28 +45,40 @@ window.onscroll = function (){
 
 let projectsArray = [
     {
+        "img": "markdown.png",
+        "title": "Markdown Previewer",
+        "tags": "#React #CSS #design",
+        "href": "https://sylwik.github.io/Markdown-Previewer/"
+    },
+    {
         "img": "page1.jpg",
         "title": "Gazeta prawna",
         "tags": "#HTML #SCSS #design",
-        "href": "#"
+        "href": ""
+    },
+    {
+        "img": "calculator.png",
+        "title": "Calculator",
+        "tags": "#React #CSS #design",
+        "href": "https://sylwik.github.io/calculator/"
     },
     {
         "img": "page2.jpg",
         "title": "Portfolio template",
         "tags": "#HTML #CSS #design",
-        "href": "#"
+        "href": ""
     },
     {
         "img": "page3.jpg",
         "title": "WoW survey form",
         "tags": "#HTML #CSS #design",
-        "href": "#"
+        "href": ""
     },
     {
         "img": "page4.jpg",
         "title": "Saxophones store",
         "tags": "#HTML #CSS #design",
-        "href": "#"
+        "href": ""
     },
     {
         "img": "page5.jpg",
@@ -85,6 +97,7 @@ for (let i = 0; i < swiperSlide.length; i++){
     let projectBox = document.createElement('a');
     projectBox.className = "project-box";
     projectBox.href = projectsArray[i].href;
+    projectBox.target = '_blank';
     swiperSlide[i].appendChild(projectBox);
 };
 let projectBox = document.getElementsByClassName("project-box");

@@ -57,12 +57,6 @@ let projectsArray = [
         "href": "https://sylwik.github.io/Heat-map/"
     },
     {
-        "img": "page1.jpg",
-        "title": "Gazeta prawna",
-        "tags": "#HTML #SCSS #design",
-        "href": ""
-    },
-    {
         "img": "calculator.png",
         "title": "Calculator",
         "tags": "#React #CSS #design",

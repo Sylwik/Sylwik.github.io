@@ -51,6 +51,12 @@ let projectsArray = [
         "href": "https://sylwik.github.io/Markdown-Previewer/"
     },
     {
+        "img": "heat.png",
+        "title": "Heat Map",
+        "tags": "#HTML #D3 #design",
+        "href": "https://sylwik.github.io/Heat-map/"
+    },
+    {
         "img": "page1.jpg",
         "title": "Gazeta prawna",
         "tags": "#HTML #SCSS #design",

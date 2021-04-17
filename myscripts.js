@@ -54,7 +54,7 @@ let projectsArray = [
         "img": "heat.png",
         "title": "Heat Map",
         "tags": "#HTML #D3 #design",
-        "href": "https://sylwik.github.io/Heat-map/"
+        "href": "https://sylwik.github.io/Heat-Map/"
     },
     {
         "img": "calculator.png",

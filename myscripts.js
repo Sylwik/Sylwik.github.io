@@ -75,10 +75,10 @@ let projectsArray = [
         "href": ""
     },
     {
-        "img": "page4.jpg",
-        "title": "Saxophones store",
-        "tags": "#HTML #CSS #design",
-        "href": ""
+        "img": "choropleth.png",
+        "title": "Choropleth Map",
+        "tags": "#HTML #D3 #design",
+        "href": "https://sylwik.github.io/Choropleth-Map/"
     },
     {
         "img": "page5.jpg",

@@ -66,13 +66,13 @@ let projectsArray = [
         "img": "page2.jpg",
         "title": "Portfolio template",
         "tags": "#HTML #CSS #design",
-        "href": ""
+        "href": "https://codepen.io/Sylwik/pen/WNopWRP"
     },
     {
         "img": "page3.jpg",
         "title": "WoW survey form",
         "tags": "#HTML #CSS #design",
-        "href": ""
+        "href": "https://codepen.io/Sylwik/pen/gOLYMJQ"
     },
     {
         "img": "choropleth.png",
@@ -139,26 +139,18 @@ let skillsArray = [
     },
     {
         "skill": "JavaScript",
-        "percentage": "40%"
+        "percentage": "50%"
     },
     {
         "skill": "React",
-        "percentage": "20%"
-    },
-    {
-        "skill": "Angular",
-        "percentage": "10%"
-    },
-    {
-        "skill": "Node.js",
-        "percentage": "10%"
-    },
-    {
-        "skill": "Python",
-        "percentage": "0%"
+        "percentage": "40%"
     },
     {
         "skill": "Gimp",
+        "percentage": "30%"
+    },
+    {
+        "skill": "D3",
         "percentage": "40%"
     },
     {
@@ -188,7 +180,7 @@ for (let i = 0; i < skillClass.length; i++) {
     let percentage = document.createElement('div');
     percentage.className = "percentage";
     skillClass[i].appendChild(percentage);
-    percentage.innerText = skillsArray[i].percentage;
+    // percentage.innerText = skillsArray[i].percentage;
     for(let j = 0; j < 4; j++){
         let span = document.createElement('span');
         skillClass[i].appendChild(span);
@@ -206,11 +198,19 @@ for (let i = 0; i < barClass.length; i++) {
     circle.style.left = skillsArray[i].percentage;
 };
 
-// skills animation
+// Mail showing
 
-if(window.pageYOffset >= 1050){
-    
-}
+const mailIcon = document.getElementById("mail-icon");
+const myMail = document.getElementById("my-mail");
+
+mailIcon.addEventListener('click', ()=>{
+    if (myMail.style["opacity"] == 0) {
+        myMail.style["opacity"] = 1;
+    }else{
+        myMail.style["opacity"] = 0;               
+    }
+});
+
 
 // clock
 

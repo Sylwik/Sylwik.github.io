@@ -387,6 +387,15 @@ body #contact #clock .num a {
 body #contact #clock .num a:hover {
   color: #2727ff;
 }
+body #contact #clock .num #my-mail {
+  position: absolute;
+  font-size: 20px;
+  transform: rotate(90deg);
+  top: -160px;
+  left: -95px;
+  color: #ff295e;
+  opacity: 0;
+}
 body #contact #clock .num:nth-child(1) {
   transform: translate(-50%, 0) rotate(30deg);
 }

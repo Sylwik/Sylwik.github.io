@@ -845,8 +845,15 @@ body #footer {
     width: 100% !important;
     margin-bottom: 30px;
   }
+  body #info-container #info p {
+    color: #000000;
+    font-weight: bold;
+  }
   body #info-container #skills-container {
     width: 100% !important;
+  }
+  body #info-container #skills-container h1 {
+    color: #C5C5F7;
   }
 }
 

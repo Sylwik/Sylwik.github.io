@@ -544,9 +544,16 @@ body{
             #info{
                 width: 100% !important;
                 margin-bottom: 30px;
+                p{
+                    color: $dark;
+                    font-weight: bold;
+                }
             }
             #skills-container{
                 width: 100% !important;
+                h1{
+                    color: $light;
+                }
             }
         }
     }

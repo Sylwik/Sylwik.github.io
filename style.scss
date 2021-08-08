@@ -345,8 +345,8 @@ body{
         #clock{
             margin: 0 auto auto auto;
             @include box(500px, 500px);
-            background-image: url("programming-1873854_960_720.webp");
-            //background-color: rgba(255,255,255, 0.1);
+            background-image: url("programming-1873854_960_720.webp"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+            background-blend-mode: multiply;
             box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.8);
             border-radius: 50%;
             border: solid 5px;
@@ -434,7 +434,6 @@ body{
             bottom: 5px;
             border-radius: 50%;
             pointer-events: none;
-            //background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%, transparent 70%, rgba(0,0,0,0.9) 100%);
         }
         #small-contact{
             @include center-content();

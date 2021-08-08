@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lato:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontello-4e40d086/css/fontello.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
 </head>
  <body>
      <nav id="navbar">
@@ -26,24 +27,21 @@
                 <li><a href="#contact"><span class="code">< </span>Contact<span> /></span></a></li>
             </ul>
          </div>
-         <div id="burger">
-            <div id="line1"></div>
-            <div id="line2"></div>
-            <div id="line3"></div>
-         </div>
      </nav>
+     <div id="burger">
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+     </div>
+     <div id="invisible-nav"></div>
     <header>
-        <img id="triangles" src="pngkey.com-triforce-png-201540.png">
-        <h1>Hi, my name is <span>Sylwia Dudzik</span></h1>
-        <p></p>
+            <h1>Hi, my name is <br><span>Sylwia Dudzik</span></h1>
+            <p>I'm a front-end developer</p>
     </header>
+    <section id="skewed"></section>
     <section id="projects">
-        <h1>Check out some on my projects!</h1>
+        <h1>Check out some of my projects!</h1>
         <div id="projects-container">
-            <div class="swiper-container">
-                <div id="swiper-wrapper" class="swiper-wrapper">
-                </div>
-            </div>
         </div>
     </section>
     <section id="about-me">
@@ -51,11 +49,14 @@
         <div id="info-container">
             <div id="info">
                 <img id="ja" src="ja2.png">
-                
-                <p>I'm a construction engineering graduate. I was working as production preparation specialist in a wooden joinery industry. 
-                    Now I am learning programming since 2020. </p>
+                <p>I'm a civil engineer. 
+                    Since 2020 I'm learning programming. 
+                    In 2021 I've started to gain my commercial experience as WordPress front-end developer. </p>
             </div>
-            <div id="skills"></div>
+            <div id="skills-container">
+                <h1>My skills</h1>
+                <div id="skills"></div>
+            </div>
         </div>
     </section>
     <section id="contact">
@@ -97,8 +98,7 @@
                     <a class="num-a">8</a>
                 </div>
                 <div class="num">
-                    <p id="my-mail">sylwiadudzik@yahoo.com</p>
-                    <a id="mail-icon" class="num-a icon icon-mail-alt"></a>
+                    <a href="mailto:sylwiadudzik@yahoo.com" id="mail-icon" class="num-a icon icon-mail-alt"></a>
                 </div>
                 <div class="num">
                     <a class="num-a">10</a>
@@ -117,37 +117,10 @@
             <a href="" target="_blank" class="icon-mail-alt"></a>
             <a href=""  target="_blank" class="icon-linkedin-squared"></a>
         </div>
-        <div id="footer">
-            <p>Handcrafted by &copy; Sylwia Dudzik</p>
-        </div>
     </section> 
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-        delay: 100
-    });
-  </script>
+    <footer id="footer">
+        <p>Handcrafted by &copy; Sylwia Dudzik</p>
+    </footer>
    <script src="myscripts.js"></script>
-   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-   <script>
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-  </script>
 </body>
 </html>

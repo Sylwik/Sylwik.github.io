@@ -1,5 +1,4 @@
-// nav slide
-
+// Mobile nav slide
 const navSlide = ()=>{
     const burger = document.querySelector("#burger");
     const nav = document.querySelector("#nav-list");
@@ -19,29 +18,42 @@ const navSlide = ()=>{
 };
 navSlide();
 
-    //Hiding navbar
+// Nav show on mouseover 
+let hiddenNav = document.getElementById("invisible-nav");
+hiddenNav.addEventListener("mouseover", ()=>{
+    document.getElementById("navbar").style.top = "0";
+});
+document.getElementById("navbar").addEventListener("mouseover", ()=>{
+    document.getElementById("navbar").style.top = "0";
+});
+hiddenNav.addEventListener("mouseout", ()=>{
+    document.getElementById("navbar").style.top = "-60px";
+});
 
+//Hiding navbar
 var prevScrollpos = window.pageYOffset;
 window.addEventListener('scroll', ()=>{
     if(window.innerWidth > 800){
         if (prevScrollpos > window.pageYOffset) {
             document.getElementById("navbar").style.top = "0";
           } else {
-            document.getElementById("navbar").style.top = "-50px";
+            document.getElementById("navbar").style.top = "-60px";
           }
           prevScrollpos = window.pageYOffset;
     }
 });
 
-// triangles moving while scrolling
+// Skewed section 
+let skewed = document.querySelector("#skewed");
 
-const triangles = document.getElementById("triangles");
-window.onscroll = function (){
-    triangles.style.bottom = window.pageYOffset + "px";
-    triangles.style.opacity = (100 - (window.pageYOffset)/5) + "%";
-};
+window.addEventListener('scroll', function(){
+    let value = -7 + window.scrollY/60;
+    if (window.scrollY < 420) {
+        skewed.style.transform = "skewY("+ value +"deg)";
+    }
+})
 
-// projects array
+// Projects array
 
 let projectsArray = [
     {
@@ -59,20 +71,20 @@ let projectsArray = [
     {
         "img": "calculator.png",
         "title": "Calculator",
-        "tags": "#React #CSS #design",
+        "tags": "#React #JavaScript #CSS #design",
         "href": "https://sylwik.github.io/calculator/"
     },
     {
-        "img": "page2.jpg",
-        "title": "Portfolio template",
-        "tags": "#HTML #CSS #design",
-        "href": "https://codepen.io/Sylwik/pen/WNopWRP"
+        "img": "szkolenia.jpg",
+        "title": "Szkolenia NaturaTour",
+        "tags": "#WordPress #CSS #front-end #commercial",
+        "href": "http://szkolenia.naturatour.pl/"
     },
     {
-        "img": "page3.jpg",
-        "title": "WoW survey form",
-        "tags": "#HTML #CSS #design",
-        "href": "https://codepen.io/Sylwik/pen/gOLYMJQ"
+        "img": "luxkon.jpg",
+        "title": "Luxkon24",
+        "tags": "#CSS #JavaScript #WordPress #front-end #commercial",
+        "href": "https://www.dev.luxkon24.pl/"
     },
     {
         "img": "choropleth.png",
@@ -88,23 +100,22 @@ let projectsArray = [
     }
 ];
 for (let i = 0; i < projectsArray.length; i++){
-    let project = document.createElement('div');
-    document.getElementById("swiper-wrapper").appendChild(project);
-    project.className = "swiper-slide";
-}
-let swiperSlide = document.getElementsByClassName("swiper-slide");
-for (let i = 0; i < swiperSlide.length; i++){
     let projectBox = document.createElement('a');
+    document.getElementById("projects-container").appendChild(projectBox);
     projectBox.className = "project-box";
     projectBox.href = projectsArray[i].href;
     projectBox.target = '_blank';
-    swiperSlide[i].appendChild(projectBox);
-};
+}
 let projectBox = document.getElementsByClassName("project-box");
 for(let i = 0; i < projectBox.length; i++){
     let img = document.createElement('img');
     img.src = projectsArray[i].img;
+    img.classList.add("page-image");
     projectBox[i].appendChild(img);
+    let linkIcon = document.createElement('img');
+    linkIcon.src = "external-link.png";
+    linkIcon.classList.add("link-image");
+    projectBox[i].appendChild(linkIcon);
     let projectText = document.createElement('div');
     projectText.className = "project-text";
     projectBox[i].appendChild(projectText);
@@ -122,98 +133,66 @@ for (let i = 0; i < projectText.length; i++){
     projectText[i].appendChild(tags);
 };
 
-// skills array
+// Skills array
 
 let skillsArray = [
     {
-        "skill": "CSS",
-        "percentage": "70%"
+        subject: "CSS",
+        image: "css.png"
     },
     {
-        "skill": "HTML",
-        "percentage": "70%"
+        subject: "HTML",
+        image: "html.png"
     },
     {
-        "skill": "SCSS",
-        "percentage": "60%"
+        subject: "SCSS/SASS",
+        image: "sass.png"
     },
     {
-        "skill": "JavaScript",
-        "percentage": "50%"
+        subject: "JavaScript",
+        image: "js.png"
     },
     {
-        "skill": "React",
-        "percentage": "40%"
+        subject: "WordPress",
+        image: "wordpress.png"
     },
     {
-        "skill": "Gimp",
-        "percentage": "30%"
+        subject: "React",
+        image: "react.png"
     },
     {
-        "skill": "D3",
-        "percentage": "40%"
+        subject: "Gimp",
+        image: "gimp.png"
     },
     {
-        "skill": "jQuery",
-        "percentage": "10%"
+        subject: "D3",
+        image: "d3.png"
     }
 ];
-let delay = 0;
 for(d of skillsArray){
     let skill = document.createElement('div');
     document.getElementById("skills").appendChild(skill);
     skill.className = "skill";
-    skill.setAttribute("data-aos", "fade-up");
-    skill.setAttribute("data-aos-delay", delay);
-    skill.setAttribute("data-aos-offset", 0);
-    delay += 150;
 };
 let skillClass = document.getElementsByClassName('skill');
 for (let i = 0; i < skillClass.length; i++) {
-    let desc = document.createElement('div');
-    desc.className = "description"; 
-    skillClass[i].appendChild(desc);
-    desc.innerText = skillsArray[i].skill;
-    let bar = document.createElement('div');
-    bar.className = "bar";
-    skillClass[i].appendChild(bar);
-    let percentage = document.createElement('div');
-    percentage.className = "percentage";
-    skillClass[i].appendChild(percentage);
-    // percentage.innerText = skillsArray[i].percentage;
-    for(let j = 0; j < 4; j++){
-        let span = document.createElement('span');
-        skillClass[i].appendChild(span);
-    }; 
-};
-let barClass = document.getElementsByClassName('bar');
-for (let i = 0; i < barClass.length; i++) {
-    let full = document.createElement('div');
-    full.className = "full";
-    barClass[i].appendChild(full);
-    full.style.width = skillsArray[i].percentage;
-    let circle = document.createElement('img');
-    circle.src = "round.png";
-    barClass[i].appendChild(circle);
-    circle.style.left = skillsArray[i].percentage;
+    let img = document.createElement("img");
+    img.src = skillsArray[i].image;
+    skillClass[i].appendChild(img);
 };
 
-// Mail showing
+// Skill overlay
+let skill = document.getElementsByClassName("skill");
+	for(let i = 0; i < skill.length; i++) {
+			let redBox = document.createElement("div"); 
+			skill[i].appendChild(redBox);
+			redBox.classList.add("red-box");
+			let desc = document.createElement("p"); 
+			desc.innerText = skillsArray[i].subject;
+			redBox.appendChild(desc);
+	}
 
-const mailIcon = document.getElementById("mail-icon");
-const myMail = document.getElementById("my-mail");
-
-mailIcon.addEventListener('click', ()=>{
-    if (myMail.style["opacity"] == 0) {
-        myMail.style["opacity"] = 1;
-    }else{
-        myMail.style["opacity"] = 0;               
-    }
-});
-
-
-// clock
-
+// Clock
 const hrHand = document.getElementById("hr-hand");
 const minHand = document.getElementById("min-hand");
 let numArr = document.getElementsByClassName("num-a");

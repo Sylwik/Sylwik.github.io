@@ -81,9 +81,9 @@ let projectsArray = [
     },
     {
         "img": "",
-        "title": "Luxkon24",
+        "title": "Narodowy Program Rozwoju Czytelnictwa",
         "tags": "#CSS #JavaScript #WordPress #front-end #commercial",
-        "href": "https://www.dev.luxkon24.pl/"
+        "href": "https://nprcz.pl/"
     },
     {
         "img": "/img/choropleth.png",

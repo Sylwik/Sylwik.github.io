@@ -56,37 +56,37 @@ window.addEventListener('scroll', function(){
 
 let projectsArray = [
     {
-        "img": "markdown.png",
+        "img": "/img/markdown.png",
         "title": "Markdown Previewer",
-        "tags": "#React #CSS #design",
+        "tags": "#React #design",
         "href": "https://sylwik.github.io/Markdown-Previewer/"
     },
     {
-        "img": "heat.png",
+        "img": "/img/heat.png",
         "title": "Heat Map",
-        "tags": "#HTML #D3 #design",
+        "tags": "#D3 #design",
         "href": "https://sylwik.github.io/Heat-Map/"
     },
     {
-        "img": "calculator.png",
+        "img": "/img/calculator.png",
         "title": "Calculator",
-        "tags": "#React #JavaScript #CSS #design",
+        "tags": "#React #JavaScript #design",
         "href": "https://sylwik.github.io/calculator/"
     },
     {
-        "img": "szkolenia.jpg",
+        "img": "/img/szkolenia.jpg",
         "title": "Szkolenia NaturaTour",
-        "tags": "#WordPress #CSS #front-end #commercial",
+        "tags": "#WordPress",
         "href": "http://szkolenia.naturatour.pl/"
     },
     {
-        "img": "luxkon.jpg",
+        "img": "",
         "title": "Luxkon24",
         "tags": "#CSS #JavaScript #WordPress #front-end #commercial",
         "href": "https://www.dev.luxkon24.pl/"
     },
     {
-        "img": "choropleth.png",
+        "img": "/img/choropleth.png",
         "title": "Choropleth Map",
         "tags": "#HTML #D3 #design",
         "href": "https://sylwik.github.io/Choropleth-Map/"

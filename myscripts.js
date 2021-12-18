@@ -56,6 +56,18 @@ window.addEventListener('scroll', function(){
 
 let projectsArray = [
     {
+        "img": "/img/businessdrive.png",
+        "title": "Business Drive",
+        "tags": "#WordPress #JavaScript",
+        "href": "https://businessdrive.pl/"
+    },
+    {
+        "img": "/img/nprcz.png",
+        "title": "Narodowy Program Rozwoju Czytelnictwa",
+        "tags": "#JavaScript #WordPress",
+        "href": "https://nprcz.pl/"
+    },
+    {
         "img": "/img/markdown.png",
         "title": "Markdown Previewer",
         "tags": "#React #design",
@@ -79,22 +91,17 @@ let projectsArray = [
         "tags": "#WordPress",
         "href": "http://szkolenia.naturatour.pl/"
     },
-    {
-        "img": "",
-        "title": "Narodowy Program Rozwoju Czytelnictwa",
-        "tags": "#CSS #JavaScript #WordPress #front-end #commercial",
-        "href": "https://nprcz.pl/"
-    },
+    
     {
         "img": "/img/choropleth.png",
         "title": "Choropleth Map",
-        "tags": "#HTML #D3 #design",
+        "tags": "#D3 #design",
         "href": "https://sylwik.github.io/Choropleth-Map/"
     },
     {
-        "img": "page5.jpg",
+        "img": "/img/page5.jpg",
         "title": "Random quotes machine",
-        "tags": "#React #CSS #design",
+        "tags": "#React #design",
         "href": "https://sylwik.github.io/Random-quote-machine/"
     }
 ];

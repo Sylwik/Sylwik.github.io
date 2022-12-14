@@ -142,7 +142,7 @@ body header {
   height: 100vh;
   width: 100%;
   padding: 30vh 0;
-  background-image: url("laptop.jpg");
+  background-image: url("img/laptop.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -749,7 +749,7 @@ body #footer {
           align-items: center;
   font-family: 'MonteCarlo', cursive;
   font-size: 18px;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 @media screen and (max-width: 500px) {

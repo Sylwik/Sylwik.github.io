@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,117 +12,462 @@
     <meta name="og:description" content="Portfolio front-end web developera - Sylwia Dudzik">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lato:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lato:ital@1&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="fontello-4e40d086/css/fontello.css">
     <link rel="stylesheet" href="fontello-8c9892ad/css/fontello.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
 </head>
- <body>
-     <nav id="navbar">
-         <div id="nav-list">
-             <ul>
-                <li><a href="#"><span class="code">< </span>Start<span> /></span></a></li>
-                 <li><a href="#projects"><span class="code">< </span>My projects<span> /></span></a></li>
-                 <li><a href="#about-me"><span class="code">< </span>About me<span> /></span></a></li>
-                <li><a href="#contact"><span class="code">< </span>Contact<span> /></span></a></li>
-            </ul>
-         </div>
-     </nav>
-     <div id="burger">
-        <div id="line1"></div>
-        <div id="line2"></div>
-        <div id="line3"></div>
-     </div>
-     <div id="invisible-nav"></div>
+
+<body>
     <header>
-            <h1>Hi, my name is <br><span>Sylwia Dudzik</span></h1>
-            <p>I'm a front-end developer</p>
+        <nav id="navbar">
+            <div id="nav-list">
+                <ul>
+                    <li><a href="#"><span class="code">
+                                < </span>Start<span> /></span></a></li>
+                    <li><a href="#projects"><span class="code">
+                                < </span>Portfolio<span> /></span></a></li>
+                    <li><a href="#about-me"><span class="code">
+                                < </span>Skills<span> /></span></a></li>
+                    <li><a href="#contact"><span class="code">
+                                < </span>Contact<span> /></span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="burger">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+        </div>
+        <div id="invisible-nav"></div>
     </header>
-    <section id="skewed"></section>
-    <section id="projects">
-        <h1>Check out some of my projects!</h1>
+    <section id="title-section" class="v-line-left">
+        <div class="title">
+            <span class="sub-heading">Hello, <span style="color:#29a587">my name is</span></span>
+            <h1><span style="color:#29a587">SYLWIA</span> <span style="color:white">DUDZIK</span></h1>
+            <p>I work as a <span class="fancy-text">web developer</span> since 2020. Most of my commercial experience is
+                related to WordPress.</p>
+            </p>
+            <a id="cv" target="_blank"
+                href="https://docs.google.com/document/d/19RvOJ-62g--C0TEbsAdVkcW6DHYe1L_d3iL8871yXEI/edit?usp=sharing">
+                DOWNLOAD CV
+            </a>
+        </div>
+        <div class="photo">
+            <div id="face-box">
+                <img id="beret" src="imgs/beret.svg" loading="lazy">
+                <img id="mustache" src="imgs/mustache.svg" loading="lazy">
+                <img id="mask" src="imgs/mask.webp" loading="lazy">
+                <img id="eye-patch" src="imgs/pirate_eye_patch.svg" loading="lazy">
+                <img id="hat" src="imgs/pirate_hat.svg" loading="lazy">
+                <img id="blush" src="imgs/kawaii-blush.png" loading="lazy">
+                <div id="text-cloud">
+                    <p>Guess you are staring at me for a while now...</p>
+                </div>
+                <div id="quote">
+                    <p>"The noblest art is that of making others happy."</p>
+                </div>
+            </div>
+            <img id="my-photo" src="imgs/ja.webp" alt="Sylwia Dudzik">
+        </div>
+        <div class="v-line-block"><span></span></div>
+    </section>
+    <div class="shadow">Web Developer</div>
+    <img id="parrot" src="imgs/red_parrot.webp">
+    <section id="projects" class="v-line-right">
+        <h2>PORTFOLIO</h2>
+        <span class="sub-heading" style="color:#29a587">Some of my <span class="fancy-text">projects</span></span>
+        <div class="tabs">
+            <div class="tab active" data-year="2022">2022</div>
+            <div class="tab" data-year="2021">2021</div>
+            <div class="tab" data-year="2020">2020</div>
+        </div>
         <div id="projects-container">
+            <div class="year" data-year="2022">
+                <a class="project-box" href="http://minterior.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/minterior.png)"></div>
+                    <div class="project-text">
+                        <span>#design #maintance #WordPress</span>
+                        <h2>Minterior</h2>
+                        <div class="divider"></div>
+                        <p>Design, development and maintance of interior design studio website.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://www.jubilerkrupa.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/krupa.png)"></div>
+                    <div class="project-text">
+                        <span>#ERP #design #WooCommerce</span>
+                        <h2>Krupa</h2>
+                        <div class="divider"></div>
+                        <p>Design, development, integration with ERP system and maintance of jewerly store.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://ai4ar.opi.org.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/ai4ar.webp)"></div>
+                    <div class="project-text">
+                        <span>#accessibility #WordPress</span>
+                        <h2>AI4AR</h2>
+                        <div class="divider"></div>
+                        <p>Development of the National Research Institute website according to accessibility standards based on provided graphic design.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://lesznowola.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/lesznowola.png)"></div>
+                    <div class="project-text">
+                        <span>#accessibility #teamwork #WordPress</span>
+                        <h2>Lesznowola</h2>
+                        <div class="divider"></div>
+                        <p>Development of the Commune Office website according to accessibility standards, importing data from the old website and maintence.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/b2bluxkon.webp)"></div>
+                    <div class="project-text">
+                        <span>#ERP #teamwork #WooCommerce</span>
+                        <h2>B2B Luxkon</h2>
+                        <div class="divider"></div>
+                        <p>Development of B2B platform integrated with ERP system.</p>
+                    </div>
+                </a>
+                <a class="project-box" href="https://www.jelo.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/jelo.png)"></div>
+                    <div class="project-text">
+                        <span>#design #WooCommerce</span>
+                        <h2>Jelo</h2>
+                        <div class="divider"></div>
+                        <p>Design and development of online store with accessories for agricultural machinery.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="year" data-year="2021">
+                <a class="project-box" href="https://wadia.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/wadia.png)"></div>
+                    <div class="project-text">
+                        <span>#design #WordPress</span>
+                        <h2>Wadia</h2>
+                        <div class="divider"></div>
+                        <p>Design and development of the law office website.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="http://szkolenia.naturatour.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/szkolenia.jpg)"></div>
+                    <div class="project-text">
+                        <span>#maintance #WordPress</span>
+                        <h2>NaturaTour Courses</h2>
+                        <div class="divider"></div>
+                        <p>Development and maintance of website with courses for train workers.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://nprcz.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/nprcz.png)"></div>
+                    <div class="project-text">
+                        <span>#accessibility #WordPress</span>
+                        <h2>NPRCz 2.0</h2>
+                        <div class="divider"></div>
+                        <p>Development and implementation of the provided graphic design of National Reading Development Program website.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://www.luxkon24.pl/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/luxkon24.png)"></div>
+                    <div class="project-text">
+                        <span>#teamwork #WooCommerce</span>
+                        <h2>Luxkon24</h2>
+                        <div class="divider"></div>
+                        <p>Implementation of the provided graphic design for online store with tiles and bathroom fittings.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://sylwik.github.io/calculator/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/calculator.webp)"></div>
+                    <div class="project-text">
+                        <span>#educational #React</span>
+                        <h2>Calculator</h2>
+                        <div class="divider"></div>
+                        <p>Project using React.js to create a calculator.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="year" data-year="2020" >
+                <a class="project-box" href="https://sylwik.github.io/Random-quote-machine/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/page5.jpg)"></div>
+                    <div class="project-text">
+                        <span>#educational #React</span>
+                        <h2>Random quotes machine</h2>
+                        <div class="divider"></div>
+                        <p>Project using React.js to draw quotes.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://sylwik.github.io/Heat-Map/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/heat.webp)"></div>
+                    <div class="project-text">
+                        <span>#D3 #educational</span>
+                        <h2>Heat Map</h2>
+                        <div class="divider"></div>
+                        <p>Project using D3.js library to present JSON data in the form of a graph.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+                <a class="project-box" href="https://sylwik.github.io/Choropleth-Map/" target="_blank">
+                    <div class="img-frame" style="background-image:url(imgs/choropleth.webp)"></div>
+                    <div class="project-text">
+                        <span>#D3 #educational</span>
+                        <h2>Choropleth Map</h2>
+                        <div class="divider"></div>
+                        <p>Project using D3.js library to present JSON data in the form of a graph.</p>
+                        <div class="see-project">
+                            <span>See project</span>
+                            <img src="imgs/next.png">
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
+        <div class="v-line-block"><span></span></div>
     </section>
-    <section id="about-me">
-        <h1>About me</h1>
-        <div id="info-container">
-            <div id="info">
-                <img id="ja" src="ja2.png">
-                <p>I'm a civil engineer. 
-                    Since 2020 I'm learning programming. 
-                    In 2021 I've started to gain my commercial experience as WordPress front-end developer. </p>
+    <div class="shadow">Portfolio</div>
+    <section id="about-me" class="v-line-left">
+        <h2>PROFESSIONAL SKILLS</h2>
+        <span class="sub-heading" style="color:#29a587">What I <span class="fancy-text">know</span></span>
+        <div id="skills">
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>Using (mostly vanilla) JavaScript is part of my daily work. I use it mostly for a front-end purpose, but also have some experience in web scraping.</p>
             </div>
-            <div id="skills-container">
-                <h1>My skills</h1>
-                <div id="skills"></div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>PHP</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>Using PHP is part of my daily work. My PHP experience is built on creating WordPress plugins, custom posts, child themes and changing other settings within WordPress.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>HTML + CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                    </div>
+                </div>
+                <p>HTML and CSS/SCSS are often a great part of my work. I like to take care of the aesthetics of my projects and do something extra that catches the eye.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>WordPress</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>Almost all of my projects were built on WordPress. I always create a child theme for my PHP/CSS/JS additions, sometimes my projects require also writing custom plugins.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>WooCommerce</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>A lot of my projects were based on WooCommerce. I was also responsible for integration with external tools for managing and advertising products (like ODL or BaseLinker).</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>SEO</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>I am responsible for creating websites according to the best SEO practices. I have also some practice with Google Search Console. In 2021 I have completed the SEO basics course.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>As for now my React experience is only educational. I would like to expand my skills in this area in the future.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>As for now my Node.js experience is mostly educational. I would like to expand my skills in this area in the future.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>Gimp</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>I'm not a graphic designer, but the basics of photo processing are useful in my work.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-heading">
+                    <h3>English</h3>
+                    <div class="skill-bar">
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball filled"></div>
+                        <div class="skill-ball"></div>
+                        <div class="skill-ball"></div>
+                    </div>
+                </div>
+                <p>Greetings from Poland! In 2018 I achieved B2 score in TOEIC test. In 2020 I started browsing the Internet in English and practicing speaking anytime I could. For sure my English isn't perfect, but I feel comfortable having a conversation.</p>
             </div>
         </div>
+        <div class="v-line-block"><span></span></div>
     </section>
-    <section id="contact">
-        <h1>It's time to work together</h1>
-        <div id="clock">
-            <div id="center"></div>
-            <div id="hr-hand" class="hand-container">
-                <div id="hr" class="hand"></div>
+    <div id="skills-shadow" class="shadow">Skills</div>
+    <section id="contact" class="v-line-right">
+        <h2>CONTACT</h2>
+        <span class="sub-heading" style="color:#29a587">It's time to <span class="fancy-text">work together</span></span>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <img src="imgs/location.png">
+                    </div>
+                    <div class="contact-info-text">
+                        <h3>Location</h3>
+                        <p>Poland, Lublin</p>
+                    </div>
+                </div>
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <img src="imgs/phone-message.png">
+                    </div>
+                    <div class="contact-info-text">
+                        <h3>Phone</h3>
+                        <a href="tel:+48722799166">+48 722 799 166</a>
+                    </div>
+                </div>
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <img src="imgs/mail.png">
+                    </div>
+                    <div class="contact-info-text">
+                        <h3>Email</h3>
+                        <a href="mailto:sylwiadudzik@yahoo.com">sylwiadudzik@yahoo.com</a>   
+                    </div>
+                </div>
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <img src="imgs/linkedin.png">
+                    </div>
+                    <div class="contact-info-text">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/sylwia-dudzik-909258ab/">Sylwia Dudzik</a>   
+                    </div>
+                </div>
             </div>
-            <div id="min-hand" class="hand-container">
-                <div id="min" class="hand"></div>
-            </div>
-            <div id="sec-hand" class="hand-container">
-                <div id="sec" class="hand"></div>
-            </div>
-            <div id="num">
-                <div class="num">
-                        <a class="num-a">1</a>
-                </div>
-                <div class="num">
-                        <a class="num-a">2</a>
-                </div>
-                <div class="num">
-                        <a href="https://www.linkedin.com/in/sylwia-dudzik-909258ab/"  target="_blank" class="num-a icon icon-linkedin-squared"></a>
-                </div>
-                <div class="num">
-                    <a class="num-a">4</a>
-                </div>
-                <div class="num">
-                    <a class="num-a">5</a>
-                </div>
-                <div class="num">
-                    <a href="tel:722799166" class="num-a icon icon-phone-squared"></a>
-                </div>
-                <div class="num">
-                    <a class="num-a">7</a>
-                </div>
-                <div class="num">
-                    <a class="num-a">8</a>
-                </div>
-                <div class="num">
-                    <a href="mailto:sylwiadudzik@yahoo.com" id="mail-icon" class="num-a icon icon-mail-alt"></a>
-                </div>
-                <div class="num">
-                    <a class="num-a">10</a>
-                </div>
-                <div class="num">
-                    <a class="num-a">11</a>
-                </div>
-                <div class="num">
-                    <a href="https://github.com/Sylwik"  target="_blank" class="num-a icon icon-github-circled-alt2"></a>
-                </div>
+            <div class="contact-giph">
+                <img src="imgs/tree.png">
             </div>
         </div>
-        <div id="small-contact">
-            <a href="https://github.com/Sylwik"  target="_blank" class="num-a icon icon-github-circled-alt2"></a>
-            <a href=""  target="_blank" class="icon-facebook-squared"></a>
-            <a href="" target="_blank" class="icon-mail-alt"></a>
-            <a href=""  target="_blank" class="icon-linkedin-squared"></a>
-        </div>
-    </section> 
+        <div class="v-line-block"></div>
+    </section>
+    <div class="shadow contact-shadow">Contact</div>
     <footer id="footer">
-        <p>Handcrafted by &copy; Sylwia Dudzik</p>
+        <div class="footer-container">
+            <p>&copy; 2023 <span style="color:#29a587">Sylwia Dudzik</span></p>
+            <p>Developed by <span style="color:#29a587">me</span></p>
+        </div>
     </footer>
-   <script src="myscripts.js"></script>
+    <script src="myscripts.js"></script>
 </body>
+
 </html>

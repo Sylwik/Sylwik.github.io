@@ -580,7 +580,7 @@ body #projects #projects-container .year {
   left: 100vw;
 }
 
-body #projects #projects-container .year[data-year="2022"] {
+body #projects #projects-container .year[data-year="2024"] {
   opacity: 1;
   left: 0;
   display: -webkit-box;

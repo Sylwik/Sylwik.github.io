@@ -23,12 +23,12 @@ $fancy-font: 'Caveat', cursive;
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 body{
     background-color: $light;
     color: $dark;
     margin: 0;
-    overflow-x: hidden;
     font-family: $small-font;
     transition: .2s;
     nav{

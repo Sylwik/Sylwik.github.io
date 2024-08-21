@@ -1053,7 +1053,7 @@ body #footer .footer-container {
   }
   body #projects #projects-container .project-box {
     width: 100%;
-    margin-left: 30px;
+    margin-left: 0px;
   }
   body #projects .tabs .tab {
     font-size: 14px;

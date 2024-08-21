@@ -102,7 +102,7 @@ navSlide();
 // Portfolio tabs
 (function(){
     let tabs = document.getElementsByClassName("tab");
-    let oldYear = "2023";
+    let oldYear = "2024";
     for(const tab of tabs){
         tab.addEventListener("click", ()=>{
             if(!tab.classList.contains("active")){

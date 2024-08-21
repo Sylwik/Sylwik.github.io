@@ -24,6 +24,7 @@ $fancy-font: 'Caveat', cursive;
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    max-width:100vw;
   }
 body{
     background-color: $light;
